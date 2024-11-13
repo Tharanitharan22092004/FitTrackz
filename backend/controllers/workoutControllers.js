@@ -7,7 +7,6 @@ const getWorkouts = async (req, res) => {
   res.status(200).json(workouts);
 };
 
-
 const getWorkout = async (req, res) => {
   const { id } = req.params;
 
@@ -24,7 +23,6 @@ const getWorkout = async (req, res) => {
   res.status(200).json(workout);
 };
 
-
 const createWorkout = async (req, res) => {
   const { title, load, reps } = req.body;
 
@@ -35,7 +33,6 @@ const createWorkout = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-
 
 const deleteWorkout = async (req, res) => {
   const { id } = req.params;
@@ -52,7 +49,6 @@ const deleteWorkout = async (req, res) => {
 
   res.status(200).json(workout);
 };
-
 
 const updateWorkout = async (req, res) => {
   const { id } = req.params;
